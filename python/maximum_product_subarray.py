@@ -12,10 +12,9 @@ class Solution:
         For the cases where we would have a new max from a negative * negative, we have cur_min
         Once we have a new max, we track the value by using total_max and return the total_max in the end.
         """ 
-        cur_max, cur_min, total_max = nums[0], nums[0], nums[0]
+        cur_max = cur_min = total_max = nums[0]
 
-        for index in range(1, len(nums)):
-            num = nums[index]
+        for num in nums[1:]
             # We use temp variables here. If we use cur_max instead of temp_max, we would have incorrect values for temp_min when calculating line 21.
             temp_max = max(num, num * cur_max, num * cur_min)
             temp_min = min(num, num * cur_max, num * cur_min)
